@@ -8,10 +8,6 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
           const totalOutTime = $scope.teamMetrics.map(team => team.totalCalledOut);
           const totalUnplannedTimeOut = $scope.teamMetrics.map(team => team.totalUnplannedOut);
           const totalWorkFromHome = $scope.teamMetrics.map(team => team.totalWorkedFromHome);
-         console.log($scope.teamMetrics);
-         console.log(employeeNames);
-         console.log(totalOutTime);
-         console.log(totalUnplannedTimeOut);
           $scope.labels = employeeNames;
           $scope.series = ['Total Time Out', 'Total Unplanned Time Out', 'Total Days Worked From Home'];
 
@@ -27,9 +23,30 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
       });
    };
 
+    $scope.items = [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56
+    ];
+
     $(document).ready(function(){
         $('.collapsible').collapsible();
+        $('.dropdown-button').dropdown({
+            belowOrigin: true,
+            alignment: 'left',
+            inDuration: 200,
+            outDuration: 150,
+            constrain_width: true,
+            hover: false,
+            gutter: 1
+        });
     });
+
 
 
    getHomeMetrics(120);

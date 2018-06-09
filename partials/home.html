@@ -5,7 +5,18 @@
     </canvas>
 </div>
 
-<ul class="collapsible">
+<div class="heading">
+    <h1>Team Metrics</h1>
+    <a class="dropdown-button btn" href="#" data-activates="dropdown2">TimeFrame(Days)
+        <i class="material-icons">arrow_drop_up</i>
+    </a>
+    <ul id='dropdown2' class='dropdown-content'>
+        <li ng-repeat="item in items">{{item}}</li>
+    </ul>
+</div>
+
+
+<ul class="collapsible popout">
     <li ng-repeat="metric in teamMetrics">
         <div class="collapsible-header"><i class="material-icons">person_outline</i>{{metric.name}}</div>
         <div class="collapsible-body">
