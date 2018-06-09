@@ -3,7 +3,7 @@
 app.controller("NewEmployeeCtrl", function($location, $scope, EmployeeService) {
 
     $scope.newEmployee = {};
-    
+
     const getManagers = () => {
         EmployeeService.getManagers().then((results) => {
             $scope.items = results.data;
@@ -24,6 +24,10 @@ app.controller("NewEmployeeCtrl", function($location, $scope, EmployeeService) {
             gutter: 1
         });
     });
+
+    $scope.addSupporter = (supporter) => {
+        console.log(supporter);
+    };
 
     getManagers();
 });
