@@ -2,4 +2,5 @@
 
 'use strict';
 
-const app = angular.module("TimeTracker", ["ngAnimate", "ngRoute", "ngSanitize"]);
+const app = angular.module("TimeTracker", ["ngAnimate", "ngRoute", "ngSanitize", "chart.js"]);
+

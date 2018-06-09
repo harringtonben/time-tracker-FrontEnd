@@ -1,27 +1,73 @@
-<table>
-    <thead>
-    <tr>
-        <th>Employee Name</th>
-        <th>Total Phone Days</th>
-        <th>Total Email Days</th>
-        <th>Total Integrations Days</th>
-        <th>Total Non-Coverage Days</th>
-        <th>Days Called Out</th>
-        <th>Days Unplanned Time Out</th>
-        <th>Days Worked From Home</th>
-    </tr>
-    </thead>
 
-    <tbody>
-    <tr ng-repeat="metric in teamMetrics">
-        <td>{{metric.name}}</td>
-        <td>{{metric.phoneDays}}</td>
-        <td>{{metric.emailDays}}</td>
-        <td>{{metric.integrationsDays}}</td>
-        <td>{{metric.noncoverageDays}}</td>
-        <td>{{metric.totalCalledOut}}</td>
-        <td>{{metric.totalUnplannedOut}}</td>
-        <td>{{metric.totalWorkedFromHome}}</td>
-    </tr>
-    </tbody>
-</table>
+<div class="home-chart">
+    <canvas id="bar" class="chart chart-bar"
+        chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors">
+    </canvas>
+</div>
+
+<ul class="collapsible">
+    <li ng-repeat="metric in teamMetrics">
+        <div class="collapsible-header"><i class="material-icons">person_outline</i>{{metric.name}}</div>
+        <div class="collapsible-body">
+            <table>
+                <thead>
+                <tr>
+                    <th>Total Phone Days</th>
+                    <th>Total Email Days</th>
+                    <th>Total Integrations Days</th>
+                    <th>Total Non-Coverage Days</th>
+                    <th>Days Called Out</th>
+                    <th>Days Unplanned Time Out</th>
+                    <th>Days Worked From Home</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>{{metric.phoneDays}}</td>
+                    <td>{{metric.emailDays}}</td>
+                    <td>{{metric.integrationsDays}}</td>
+                    <td>{{metric.noncoverageDays}}</td>
+                    <td>{{metric.totalCalledOut}}</td>
+                    <td>{{metric.totalUnplannedOut}}</td>
+                    <td>{{metric.totalWorkedFromHome}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </li>
+</ul>
+
+<!--<div class="card" >-->
+    <!--<div class="card-content">-->
+        <!--<span class="card-title activator grey-text text-darken-4">{{metric.name}}<i class="material-icons right">more_vert</i></span>-->
+    <!--</div>-->
+    <!--<div class="card-reveal">-->
+        <!--<span class="card-title grey-text text-darken-4">{{metric.name}}<i class="material-icons right">person_out</i></span>-->
+        <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<th>Total Phone Days</th>-->
+        <!--<th>Total Email Days</th>-->
+        <!--<th>Total Integrations Days</th>-->
+        <!--<th>Total Non-Coverage Days</th>-->
+        <!--<th>Days Called Out</th>-->
+        <!--<th>Days Unplanned Time Out</th>-->
+        <!--<th>Days Worked From Home</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+
+        <!--<tbody>-->
+        <!--<tr>-->
+        <!--<td>{{metric.phoneDays}}</td>-->
+        <!--<td>{{metric.emailDays}}</td>-->
+        <!--<td>{{metric.integrationsDays}}</td>-->
+        <!--<td>{{metric.noncoverageDays}}</td>-->
+        <!--<td>{{metric.totalCalledOut}}</td>-->
+        <!--<td>{{metric.totalUnplannedOut}}</td>-->
+        <!--<td>{{metric.totalWorkedFromHome}}</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>-->
+<!--</div>-->
