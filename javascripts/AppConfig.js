@@ -8,3 +8,4 @@ app.config(function($routeProvider) {
         })
         .otherwise("/home");
 });
+

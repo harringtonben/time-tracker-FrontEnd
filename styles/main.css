@@ -5,3 +5,9 @@ body {
 
 main {
   flex: 1 0 auto; }
+
+.home-chart {
+  margin: 50px; }
+
+.time-range {
+  margin-top: 35px; }
