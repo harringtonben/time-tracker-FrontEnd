@@ -84,6 +84,10 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
         getHomeMetrics(newTime);
     };
 
+    $scope.addSupporter = () => {
+        $location.path('/addnewemployee');
+    };
+
 
    getHomeMetrics(120);
 });
