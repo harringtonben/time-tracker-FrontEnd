@@ -5,14 +5,17 @@
     </canvas>
 </div>
 
-<div class="heading">
-    <h1>Team Metrics</h1>
-    <a class="dropdown-button btn" href="#" data-activates="dropdown2">TimeFrame(Days)
-        <i class="material-icons">arrow_drop_up</i>
-    </a>
-    <ul id='dropdown2' class='dropdown-content'>
-        <li ng-repeat="item in items">{{item}}</li>
-    </ul>
+<div class="row">
+    <div class="col s6">
+        <h3>Team Metrics</h3>
+    </div>
+    <div class="col s2 offset-s4 time-range">
+        <a class="dropdown-button btn" href="#" data-activates="dropdown2">TimeFrame(Days)
+        </a>
+        <ul id='dropdown2' class='dropdown-content'>
+            <li ng-repeat="item in items" ng-click="resetMetrics(item.value)" value="item.value">{{item.text}}</li>
+        </ul>
+    </div>
 </div>
 
 

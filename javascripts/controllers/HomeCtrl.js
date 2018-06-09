@@ -5,9 +5,41 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
       HomeService.getHomeMetrics(timeframe).then((results) => {
          $scope.teamMetrics = results.data;
           const employeeNames = $scope.teamMetrics.map(team => team.name);
-          const totalOutTime = $scope.teamMetrics.map(team => team.totalCalledOut);
-          const totalUnplannedTimeOut = $scope.teamMetrics.map(team => team.totalUnplannedOut);
-          const totalWorkFromHome = $scope.teamMetrics.map(team => team.totalWorkedFromHome);
+
+          const totalOutTime = $scope.teamMetrics.map((team) => {
+              if (team.totalCalledOut == null)
+              {
+                  return 0;
+              }
+              else
+              {
+                  return team.totalCalledOut;
+              }
+
+          });
+
+          const totalUnplannedTimeOut = $scope.teamMetrics.map((team) => {
+              if (team.totalUnplannedOut == null)
+              {
+                  return 0;
+              }
+              else
+              {
+                  return team.totalUnplannedOut;
+              }
+          });
+
+          const totalWorkFromHome = $scope.teamMetrics.map((team) => {
+             if (team.totalWorkedFromHome == null)
+             {
+                 return 0;
+             }
+             else
+             {
+                 return team.totalWorkedFromHome;
+             }
+          });
+
           $scope.labels = employeeNames;
           $scope.series = ['Total Time Out', 'Total Unplanned Time Out', 'Total Days Worked From Home'];
 
@@ -24,14 +56,15 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
    };
 
     $scope.items = [
-        7,
-        14,
-        21,
-        28,
-        35,
-        42,
-        49,
-        56
+        {text: "1 Week", value: 7},
+        {text: "2 Weeks", value: 14},
+        {text: "3 Weeks", value: 21},
+        {text: "4 Weeks", value: 28},
+        {text: "6 Weeks", value: 42},
+        {text: "12 Weeks", value: 84},
+        {text: "18 Weeks", value: 126},
+        {text: "6 Months", value: 182},
+        {text: "1 Year", value: 365}
     ];
 
     $(document).ready(function(){
@@ -47,6 +80,9 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
         });
     });
 
+    $scope.resetMetrics = (newTime) => {
+        getHomeMetrics(newTime);
+    };
 
 
    getHomeMetrics(120);
