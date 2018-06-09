@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Tracker</title>
+    <link rel="stylesheet" type="text/css" href="./lib/node_modules/materialize-css/dist/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+<body ng-app="TimeTracker">
+
+<div ng-include="'./partials/navbar.html'"></div>
+<div>
+
+</div>
+<div class="container" ng-view></div>
+<footer>
+    <div class="footer-copyright grey lighten-3">
+        <div class="container center-align copyright">
+            © 2018 Emma Support
+        </div>
+    </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+<script type="text/javascript" src="./javascripts/app.js"></script>
+<script type="text/javascript" src="./javascripts/AppConfig.js"></script>
+
+<script type="text/javascript" src="./javascripts/controllers/HomeCtrl.js"></script>
+
+</body>
+</html>
