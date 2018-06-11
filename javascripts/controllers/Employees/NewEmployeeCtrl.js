@@ -1,33 +1,33 @@
 'use strict';
 
-app.controller("NewEmployeeCtrl", function($location, $scope, EmployeeService) {
+app.controller("NewEmployeeCtrl", function($timeout, $location, $scope, EmployeeService) {
 
     $scope.newEmployee = {};
 
     const getManagers = () => {
         EmployeeService.getManagers().then((results) => {
-            $scope.items = results.data;
-            console.log($scope.items);
+            $scope.managers = results.data;
+            console.log($scope.managers);
+            $timeout(function () {
+                $('select').material_select();
+            });
         }).catch((error) => {
             console.log(error);
         });
     };
 
-    $(document).ready(function(){
-        $('.dropdown-button').dropdown({
-            belowOrigin: true,
-            alignment: 'left',
-            inDuration: 200,
-            outDuration: 150,
-            constrain_width: true,
-            hover: false,
-            gutter: 1
-        });
-    });
 
     $scope.addSupporter = (supporter) => {
-        console.log(supporter);
+        const employeeJson = EmployeeService.createEmployeeJson(supporter);
+
+        EmployeeService.addNewEmployee(employeeJson).then((results) => {
+            $location.path("/home");
+        }).catch((error) => {
+            console.log(error);
+        });
     };
 
+
     getManagers();
+
 });
