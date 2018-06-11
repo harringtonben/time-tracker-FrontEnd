@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("HomeCtrl", function($location, $scope, HomeService) {
+app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
    const getHomeMetrics = (timeframe) => {
       HomeService.getHomeMetrics(timeframe).then((results) => {
          $scope.teamMetrics = results.data;
@@ -50,6 +50,9 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
           ];
 
           $scope.colors = [ '#1E91D6', '#F08700', '#8FC93A', '#E4CC37', '#F06543', '#F9F871'];
+          $timeout(function () {
+              $('select').material_select();
+          });
       }).catch((error) => {
          console.log(error);
       });
@@ -69,21 +72,23 @@ app.controller("HomeCtrl", function($location, $scope, HomeService) {
 
     $(document).ready(function(){
         $('.collapsible').collapsible();
-        $('.dropdown-button').dropdown({
-            belowOrigin: true,
-            alignment: 'left',
-            inDuration: 200,
-            outDuration: 150,
-            constrain_width: true,
-            hover: false,
-            gutter: 1
-        });
     });
 
-    $scope.resetMetrics = (newTime) => {
-        getHomeMetrics(newTime);
+    $scope.resetMetrics = () => {
+        if ($scope.newTime == null)
+        {
+            $scope.newTime = 120;
+            getHomeMetrics($scope.newTime);
+        }
+        else
+        {
+            getHomeMetrics($scope.newTime);
+        }
     };
 
+    $scope.addSupporter = () => {
+        $location.path('/addnewemployee');
+    };
 
    getHomeMetrics(120);
 });
