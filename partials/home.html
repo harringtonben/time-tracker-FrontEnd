@@ -25,6 +25,7 @@
         <div class="collapsible-header"><i class="material-icons">person_outline</i>{{metric.name}}</div>
         <div class="collapsible-body">
             <a class="waves-effect waves-light btn" ng-click="editSupporter(metric.employeeId)">Edit</a>
+            <a class="waves-effect waves-light btn modal-trigger red darken-1" href="#modal-{{metric.employeeId}}">Delete</a>
             <table>
                 <thead>
                 <tr>
@@ -54,36 +55,14 @@
     </li>
 </ul>
 
-<!--<div class="card" >-->
-    <!--<div class="card-content">-->
-        <!--<span class="card-title activator grey-text text-darken-4">{{metric.name}}<i class="material-icons right">more_vert</i></span>-->
-    <!--</div>-->
-    <!--<div class="card-reveal">-->
-        <!--<span class="card-title grey-text text-darken-4">{{metric.name}}<i class="material-icons right">person_out</i></span>-->
-        <!--<table>-->
-        <!--<thead>-->
-        <!--<tr>-->
-        <!--<th>Total Phone Days</th>-->
-        <!--<th>Total Email Days</th>-->
-        <!--<th>Total Integrations Days</th>-->
-        <!--<th>Total Non-Coverage Days</th>-->
-        <!--<th>Days Called Out</th>-->
-        <!--<th>Days Unplanned Time Out</th>-->
-        <!--<th>Days Worked From Home</th>-->
-        <!--</tr>-->
-        <!--</thead>-->
+<div ng-repeat="metric in teamMetrics">
+    <div id="modal-{{metric.employeeId}}" class="modal">
+        <div class="modal-content">
+            <h4>Are you sure you want to remove {{metric.name}} as an employee?</h4>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+</div>
 
-        <!--<tbody>-->
-        <!--<tr>-->
-        <!--<td>{{metric.phoneDays}}</td>-->
-        <!--<td>{{metric.emailDays}}</td>-->
-        <!--<td>{{metric.integrationsDays}}</td>-->
-        <!--<td>{{metric.noncoverageDays}}</td>-->
-        <!--<td>{{metric.totalCalledOut}}</td>-->
-        <!--<td>{{metric.totalUnplannedOut}}</td>-->
-        <!--<td>{{metric.totalWorkedFromHome}}</td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
-        <!--</table>-->
-    <!--</div>-->
-<!--</div>-->

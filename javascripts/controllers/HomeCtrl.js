@@ -72,6 +72,7 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
 
     $(document).ready(function(){
         $('.collapsible').collapsible();
+        $('.modal').modal();
     });
 
     $scope.resetMetrics = () => {
