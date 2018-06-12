@@ -16,7 +16,7 @@ app.controller("DeleteEmployeeCtrl", function($timeout, $location, $routeParams,
 
     $scope.delete = () => {
         EmployeeService.deleteEmployee($routeParams.id).then((results) => {
-            console.log(results);
+            $location.path("/home");
         }).catch((error) => {
             console.log(error);
         });
