@@ -95,7 +95,7 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
         $location.path(`/editemployee/${id}`);
     };
 
-    $scope.editSupporter = (id) => {
+    $scope.deleteSupporter = (id) => {
         $location.path(`/deleteemployee/${id}`);
     };
 

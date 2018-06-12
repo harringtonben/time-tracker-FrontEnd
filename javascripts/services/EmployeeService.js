@@ -22,5 +22,9 @@ app.service("EmployeeService", function($http) {
         return $http.put(`http://localhost:5000/api/supporters/${employeeId}`, JSON.stringify(employee));
     };
 
-    return {addNewEmployee, createEmployeeJson, updateEmployee, getEmployeeById};
+    const deleteEmployee = (id) => {
+        return $http.delete(`http://localhost:5000/api/supporters/${id}`);
+    };
+
+    return {addNewEmployee, createEmployeeJson, deleteEmployee, updateEmployee, getEmployeeById};
 });
