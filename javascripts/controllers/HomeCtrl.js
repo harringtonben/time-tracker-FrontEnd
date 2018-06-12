@@ -99,5 +99,9 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
         $location.path(`/deleteemployee/${id}`);
     };
 
+    $scope.addManager = () => {
+        $location.path('/addnewmanager');
+    };
+
    getHomeMetrics(120);
 });

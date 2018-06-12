@@ -18,6 +18,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/Employees/deleteemployee.html',
             controller: 'DeleteEmployeeCtrl'
         })
+        .when("/addnewmanager", {
+            templateUrl: 'partials/Managers/newmanager.html',
+            controller: 'NewManagerCtrl'
+        })
         .otherwise("/home");
 });
 
