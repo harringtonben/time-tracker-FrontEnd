@@ -24,6 +24,7 @@
     <li ng-repeat="metric in teamMetrics">
         <div class="collapsible-header"><i class="material-icons">person_outline</i>{{metric.name}}</div>
         <div class="collapsible-body">
+            <a class="waves-effect waves-light btn" ng-click="editSupporter(metric.employeeId)">Edit</a>
             <table>
                 <thead>
                 <tr>

@@ -1,13 +1,12 @@
 'use strict';
 
-app.controller("NewEmployeeCtrl", function($timeout, $location, $scope, EmployeeService) {
+app.controller("NewEmployeeCtrl", function($timeout, $location, $scope, EmployeeService, ManagerService) {
 
     $scope.newEmployee = {};
 
     const getManagers = () => {
-        EmployeeService.getManagers().then((results) => {
+        ManagerService.getManagers().then((results) => {
             $scope.managers = results.data;
-            console.log($scope.managers);
             $timeout(function () {
                 $('select').material_select();
             });

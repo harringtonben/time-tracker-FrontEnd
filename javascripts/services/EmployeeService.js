@@ -1,9 +1,6 @@
 'use strict';
 
 app.service("EmployeeService", function($http) {
-    const getManagers = () => {
-        return $http.get(`http://localhost:5000/api/managers`);
-    };
 
     const addNewEmployee = (supporterJson) => {
         return $http.post(`http://localhost:5000/api/supporters`, JSON.stringify(supporterJson));
@@ -17,6 +14,10 @@ app.service("EmployeeService", function($http) {
         };
     };
 
+    const getEmployeeById = (id) => {
+        return $http.get(`http://localhost:5000/api/supporters/${id}/employeeinfo`);
+    };
 
-    return {addNewEmployee, getManagers, createEmployeeJson};
+
+    return {addNewEmployee, createEmployeeJson, getEmployeeById};
 });
