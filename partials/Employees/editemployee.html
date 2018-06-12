@@ -1,0 +1,29 @@
+<div class="row">
+    <h2>Edit {{employee.name}}'s information</h2>
+    <form class="col s12" name="newEmployee">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="name" type="text" class="validate" ng-model="employee.name">
+                <label for="name" class="active">Name (First and Last)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" class="validate" ng-model="employee.title">
+                <label for="title" class="active">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <label for="manager" class="active">Manager</label>
+            <select ng-model="employee.managerId" id="manager">
+                <option ng-selected="employee.managerId == manager.managerId" ng-repeat="manager in managers" ng-value="{{manager.managerId}}">{{manager.name}}
+                </option>
+            </select>
+
+        </div>
+        <div class="row">
+            <a class="waves-effect waves-light btn center" ng-click="updateSupporter(employee)"><i class="material-icons right">save</i>Update</a>
+        </div>
+    </form>
+
+</div>

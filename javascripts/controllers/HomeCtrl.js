@@ -90,5 +90,9 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
         $location.path('/addnewemployee');
     };
 
+    $scope.editSupporter = (id) => {
+        $location.path(`/editemployee/${id}`);
+    };
+
    getHomeMetrics(120);
 });
