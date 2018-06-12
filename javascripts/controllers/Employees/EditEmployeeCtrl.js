@@ -24,7 +24,8 @@ app.controller("EditEmployeeCtrl", function($timeout, $location, $routeParams, $
 
     $scope.updateSupporter = (employee) => {
         console.log(employee);
-        EmployeeService.updateEmployee(employee).then((results) => {
+        const employeeJson = EmployeeService.createEmployeeJson(employee);
+        EmployeeService.updateEmployee(employeeJson, employee.employeeId).then((results) => {
             console.log(results);
         }).catch((error) => {
             console.log(error);

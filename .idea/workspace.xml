@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e5f4fbd-f584-4035-b25f-2063df1b6c7a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/javascripts/controllers/Employees/EditEmployeeCtrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascripts/services/ManagerService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partials/Employees/editemployee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/AppConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/AppConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/controllers/Employees/NewEmployeeCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/Employees/NewEmployeeCtrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/controllers/HomeCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/HomeCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascripts/controllers/Employees/EditEmployeeCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/Employees/EditEmployeeCtrl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascripts/services/EmployeeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/services/EmployeeService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/Employees/editemployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/Employees/editemployee.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,56 +54,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewEmployeeCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/NewEmployeeCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EmployeeService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/services/EmployeeService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="315">
+              <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascripts/controllers/HomeCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="74" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditEmployeeCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EditEmployeeCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/EditEmployeeCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editemployee.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editemployee.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/Employees/editemployee.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partials/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="26" column="93" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
+            <state relative-caret-position="360">
+              <caret line="24" column="132" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -156,8 +122,8 @@
         <option value="$PROJECT_DIR$/javascripts/services/ManagerService.js" />
         <option value="$PROJECT_DIR$/javascripts/controllers/Employees/NewEmployeeCtrl.js" />
         <option value="$PROJECT_DIR$/javascripts/services/EmployeeService.js" />
-        <option value="$PROJECT_DIR$/partials/Employees/editemployee.html" />
         <option value="$PROJECT_DIR$/javascripts/controllers/Employees/EditEmployeeCtrl.js" />
+        <option value="$PROJECT_DIR$/partials/Employees/editemployee.html" />
       </list>
     </option>
   </component>
@@ -272,12 +238,12 @@
       <updated>1528333651627</updated>
       <workItem from="1528333652964" duration="9105000" />
       <workItem from="1528556372755" duration="15000" />
-      <workItem from="1528556401537" duration="24517000" />
+      <workItem from="1528556401537" duration="24886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33637000" />
+    <option name="totallyTimeSpent" value="34006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1127" extended-state="0" />
@@ -393,13 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/AppConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/Employees/newemployee.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -421,13 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/NewEmployeeCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/services/ManagerService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -435,24 +387,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/services/EmployeeService.js">
+    <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/NewEmployeeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/Employees/editemployee.html">
+    <entry file="file://$PROJECT_DIR$/javascripts/AppConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="210">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/services/EmployeeService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/EditEmployeeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/Employees/editemployee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="132" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
         </state>
       </provider>
     </entry>

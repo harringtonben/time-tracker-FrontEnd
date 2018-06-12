@@ -18,6 +18,9 @@ app.service("EmployeeService", function($http) {
         return $http.get(`http://localhost:5000/api/supporters/${id}/employeeinfo`);
     };
 
+    const updateEmployee = (employee, employeeId) => {
+        return $http.put(`http://localhost:5000/api/supporters/${employeeId}`, JSON.stringify(employee));
+    };
 
-    return {addNewEmployee, createEmployeeJson, getEmployeeById};
+    return {addNewEmployee, createEmployeeJson, updateEmployee, getEmployeeById};
 });
