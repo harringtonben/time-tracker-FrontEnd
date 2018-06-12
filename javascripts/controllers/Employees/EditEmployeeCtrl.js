@@ -26,7 +26,7 @@ app.controller("EditEmployeeCtrl", function($timeout, $location, $routeParams, $
         console.log(employee);
         const employeeJson = EmployeeService.createEmployeeJson(employee);
         EmployeeService.updateEmployee(employeeJson, employee.employeeId).then((results) => {
-            console.log(results);
+            $location.path("/home");
         }).catch((error) => {
             console.log(error);
         });
