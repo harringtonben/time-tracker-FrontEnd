@@ -95,5 +95,9 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
         $location.path(`/editemployee/${id}`);
     };
 
+    $scope.editSupporter = (id) => {
+        $location.path(`/deleteemployee/${id}`);
+    };
+
    getHomeMetrics(120);
 });

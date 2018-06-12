@@ -25,7 +25,7 @@
         <div class="collapsible-header"><i class="material-icons">person_outline</i>{{metric.name}}</div>
         <div class="collapsible-body">
             <a class="waves-effect waves-light btn" ng-click="editSupporter(metric.employeeId)">Edit</a>
-            <a class="waves-effect waves-light btn modal-trigger red darken-1" href="#modal-{{metric.employeeId}}">Delete</a>
+            <a class="waves-effect waves-light btn modal-trigger red darken-1" ng-click="deleteSupporter(metric.employeeId)">Delete</a>
             <table>
                 <thead>
                 <tr>
@@ -55,14 +55,4 @@
     </li>
 </ul>
 
-<div ng-repeat="metric in teamMetrics">
-    <div id="modal-{{metric.employeeId}}" class="modal">
-        <div class="modal-content">
-            <h4>Are you sure you want to remove {{metric.name}} as an employee?</h4>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
-    </div>
-</div>
 
