@@ -22,6 +22,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/Managers/newmanager.html',
             controller: 'NewManagerCtrl'
         })
+        .when("/managers", {
+            templateUrl: 'partials/Managers/managers.html',
+            controller: 'ManagersCtrl'
+        })
         .otherwise("/home");
 });
 
