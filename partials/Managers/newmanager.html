@@ -1,0 +1,21 @@
+<div class="row">
+    <h2>Add a new Manager</h2>
+    <form class="col s12" name="newManager">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="name" type="text" class="validate" ng-model="newManager.name">
+                <label for="name">Name (First and Last)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" class="validate" ng-model="newManager.title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <a class="waves-effect waves-light btn center" ng-click="addManager(newManager)"><i class="material-icons right">add</i>Add Manager</a>
+        </div>
+    </form>
+
+</div>
