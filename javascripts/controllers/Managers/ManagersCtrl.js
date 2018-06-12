@@ -10,6 +10,10 @@ app.controller("ManagersCtrl", function($timeout, $location, $scope, ManagerServ
         });
     };
 
+    $scope.editManager = (id) => {
+        $location.path(`/editmanager/${id}`);
+    };
+
     getManagers();
 
 });

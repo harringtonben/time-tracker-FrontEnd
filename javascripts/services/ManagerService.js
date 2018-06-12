@@ -16,5 +16,13 @@ app.service("ManagerService", function($http) {
         return $http.post(`http://localhost:5000/api/managers`, JSON.stringify(manager));
     };
 
-    return {addManager, createManagerJson, getManagers};
+    const getManager = (id) => {
+        return $http.get(`http://localhost:5000/api/managers/${id}`);
+    };
+
+    const editManager = (manager, id) => {
+        return $http.put(`http://localhost:5000/api/managers/${id}`, JSON.stringify(manager));
+    };
+
+    return {addManager, editManager, createManagerJson, getManager, getManagers};
 });
