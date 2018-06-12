@@ -23,7 +23,6 @@ app.controller("EditEmployeeCtrl", function($timeout, $location, $routeParams, $
     };
 
     $scope.updateSupporter = (employee) => {
-        console.log(employee);
         const employeeJson = EmployeeService.createEmployeeJson(employee);
         EmployeeService.updateEmployee(employeeJson, employee.employeeId).then((results) => {
             $location.path("/home");

@@ -72,6 +72,7 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
 
     $(document).ready(function(){
         $('.collapsible').collapsible();
+        $('.modal').modal();
     });
 
     $scope.resetMetrics = () => {
@@ -92,6 +93,10 @@ app.controller("HomeCtrl", function($timeout, $location, $scope, HomeService) {
 
     $scope.editSupporter = (id) => {
         $location.path(`/editemployee/${id}`);
+    };
+
+    $scope.deleteSupporter = (id) => {
+        $location.path(`/deleteemployee/${id}`);
     };
 
    getHomeMetrics(120);

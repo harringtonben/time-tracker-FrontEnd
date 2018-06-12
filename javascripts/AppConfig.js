@@ -14,6 +14,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/Employees/editemployee.html',
             controller: 'EditEmployeeCtrl'
         })
+        .when("/deleteemployee/:id", {
+            templateUrl: 'partials/Employees/deleteemployee.html',
+            controller: 'DeleteEmployeeCtrl'
+        })
         .otherwise("/home");
 });
 
