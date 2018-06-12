@@ -14,6 +14,10 @@ app.controller("ManagersCtrl", function($timeout, $location, $scope, ManagerServ
         $location.path(`/editmanager/${id}`);
     };
 
+    $scope.deleteManager = (id) => {
+        $location.path(`/deletemanager/${id}`);
+    };
+
     getManagers();
 
 });

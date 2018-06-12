@@ -24,5 +24,9 @@ app.service("ManagerService", function($http) {
         return $http.put(`http://localhost:5000/api/managers/${id}`, JSON.stringify(manager));
     };
 
-    return {addManager, editManager, createManagerJson, getManager, getManagers};
+    const deletManager = (id) => {
+        return $http.delete(`http://localhost:5000/api/managers/${id}`);
+    };
+
+    return {addManager, editManager, createManagerJson, deletManager, getManager, getManagers};
 });

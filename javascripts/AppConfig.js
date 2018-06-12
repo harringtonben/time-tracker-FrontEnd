@@ -30,6 +30,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/Managers/editmanager.html',
             controller: 'EditManagerCtrl'
         })
+        .when("/deletemanager/:id", {
+            templateUrl: 'partials/Managers/deletemanager.html',
+            controller: 'DeleteManagerCtrl'
+        })
         .otherwise("/home");
 });
 
