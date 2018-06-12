@@ -6,7 +6,7 @@ app.controller("NewManagerCtrl", function($timeout, $location, $scope, ManagerSe
         const managerJson = ManagerService.createManagerJson(manager);
 
         ManagerService.addManager(managerJson).then((results) => {
-            console.log(results);
+            $location.path("/home");
         }).catch((error) => {
             console.log(error);
         });

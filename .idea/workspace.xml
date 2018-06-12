@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e5f4fbd-f584-4035-b25f-2063df1b6c7a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partials/Managers/newmanager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/AppConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/AppConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/controllers/HomeCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/HomeCtrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/services/ManagerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/services/ManagerService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,16 +43,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewManagerCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewManagerCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManagerService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/services/ManagerService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -159,8 +152,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/partials/home.html" />
         <option value="$PROJECT_DIR$/partials/Managers/newmanager.html" />
-        <option value="$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js" />
         <option value="$PROJECT_DIR$/javascripts/services/ManagerService.js" />
+        <option value="$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js" />
       </list>
     </option>
   </component>
@@ -276,12 +269,12 @@
       <updated>1528333651627</updated>
       <workItem from="1528333652964" duration="9105000" />
       <workItem from="1528556372755" duration="15000" />
-      <workItem from="1528556401537" duration="30023000" />
+      <workItem from="1528556401537" duration="30128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39143000" />
+    <option name="totallyTimeSpent" value="39248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-25" y="23" width="1920" height="1127" extended-state="0" />
@@ -481,17 +474,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/services/ManagerService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="86" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/controllers/Managers/NewManagerCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
         </state>
       </provider>
     </entry>
