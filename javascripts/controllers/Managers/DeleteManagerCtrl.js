@@ -16,7 +16,6 @@ app.controller("DeleteManagerCtrl", function($timeout, $location, $routeParams, 
 
     $scope.delete = () => {
         ManagerService.deletManager($routeParams.id).then((results) => {
-            console.log(results);
             $location.path("/managers");
         }).catch((error) => {
             console.log(error);
