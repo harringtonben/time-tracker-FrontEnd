@@ -28,6 +28,17 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
         });
     };
 
+    $scope.editSupporter = (id) => {
+        $location.path(`/editemployee/${id}`);
+    };
+
+    $scope.deleteSupporter = (id) => {
+        $location.path(`/deleteemployee/${id}`);
+    };
+
+    $scope.logShift = (id) => {
+        $location.path(`/logshift/${id}`);
+    };
 
     getEmployees(120);
 });

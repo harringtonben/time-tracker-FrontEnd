@@ -1,17 +1,26 @@
 <div class="row">
-    <div class="col s4 m4" ng-repeat="employee in employees">
-        <div class="card">
-            <div class="card-content">
-                <h4>{{employee.name}}</h4>
-                <p>{{employee.title}}</p>
-                <canvas id="doughnut" class="chart chart-doughnut"
-                        chart-data="employee.chartData" chart-labels="labels">
-                </canvas>
+
+    <div class="card col s4 m4" ng-repeat="employee in employees">
+        <div class="card-image waves-effect waves-block waves-light">
+            <canvas id="doughnut" class="chart chart-doughnut"
+                    chart-data="employee.chartData" chart-labels="labels">
+            </canvas>
+        </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{employee.name}}<i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal center">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <div>
+                <a class="waves-effect waves-light btn" ng-click="editSupporter(employee.employeeId)">Edit</a>
             </div>
-            <div class="card-action">
-                <a href="" ng-click="editSupporter(employee.employeeId)">Edit</a>
-                <a href="" ng-click="deleteSupporter(employee.employeeId)">Delete</a>
+            <div>
+                <a class="waves-effect waves-light btn" ng-click="logShift(employee.employeeId)">Log Shift</a>
+            </div>
+            <div>
+                <a class="waves-effect waves-light btn modal-trigger red darken-1" ng-click="deleteSupporter(employee.employeeId)">Delete</a>
             </div>
         </div>
     </div>
 </div>
+

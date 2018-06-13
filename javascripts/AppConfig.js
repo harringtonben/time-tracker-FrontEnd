@@ -38,6 +38,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/Managers/deletemanager.html',
             controller: 'DeleteManagerCtrl'
         })
+        .when("/logshift/:id", {
+            templateUrl: 'partials/shifts.html',
+            controller: 'ShiftsCtrl'
+        })
         .otherwise("/home");
 });
 
