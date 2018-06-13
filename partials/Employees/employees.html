@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col s4 m4" ng-repeat="employee in employees">
+        <div class="card">
+            <div class="card-content">
+                <h4>{{employee.name}}</h4>
+                <p>{{employee.title}}</p>
+                <canvas id="doughnut" class="chart chart-doughnut"
+                        chart-data="employee.chartData" chart-labels="labels">
+                </canvas>
+            </div>
+            <div class="card-action">
+                <a href="" ng-click="editSupporter(employee.employeeId)">Edit</a>
+                <a href="" ng-click="deleteSupporter(employee.employeeId)">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

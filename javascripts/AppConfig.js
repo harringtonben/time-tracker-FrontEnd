@@ -6,6 +6,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/home.html',
             controller: 'HomeCtrl'
         })
+        .when("/employees", {
+            templateUrl: 'partials/Employees/employees.html',
+            controller: 'EmployeesCtrl'
+        })
         .when("/addnewemployee", {
             templateUrl: 'partials/Employees/newemployee.html',
             controller: 'NewEmployeeCtrl'
