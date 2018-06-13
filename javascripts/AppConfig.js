@@ -43,5 +43,20 @@ app.config(function($routeProvider) {
             controller: 'ShiftsCtrl'
         })
         .otherwise("/home");
+
+
 });
 
+app.config(['momentPickerProvider', function (momentPickerProvider) {
+    momentPickerProvider.options({
+        /* Picker properties */
+        locale:        'en',
+        format:        'L LTS',
+        minView:       'decade',
+        maxView:       'day',
+        startView:     'month',
+        autoclose:     true,
+        today:         false,
+        keyboard:      false
+    });
+}]);
