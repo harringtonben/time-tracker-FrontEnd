@@ -4,6 +4,12 @@ app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope,
 
     $scope.shift = {};
 
+    $scope.selectOptions = [{title: 'Yes', value: false},
+        {title: 'No', value: false}];
+
+    $scope.shiftOptions = [{title: 'Full Day', value: 1},
+        {title: 'Half Day', value: 2}];
+
     const employeeData = (timeframe) => {
         EmployeeService.getEmployeeData($routeParams.id, timeframe).then((results) => {
             $scope.employee = results.data;
@@ -20,6 +26,7 @@ app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope,
         });
     };
 
+
     $timeout(function () {
         $('select').material_select();
     });
@@ -28,7 +35,10 @@ app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope,
 
         let formattedDate = ShiftService.formatDate(date);
         ShiftService.getShiftInfo($routeParams.id, formattedDate).then((results) => {
-            $scope.shift = results.data;
+            var shiftData = results.data;
+            shiftData.date = ShiftService.formatDate(shiftData.shiftDate);
+            $scope.shift = shiftData;
+            console.log($scope.shift);
         }).catch((error) => {
             console.log(error);
         });

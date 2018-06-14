@@ -15,18 +15,16 @@
                     <form class="col s12" name="shift">
                         <div class="row">
                             <input class="form-control"
-                                   ng-model="shift.date"
+                                   ng-model="shiftCheck.date"
                                    ng-model-options="{ updateOn: 'blur' }"
                                    placeholder="Shift Date"
                                    moment-picker="ctrl.input">
-                            <a class="waves-effect waves-light btn" ng-click="getShiftInfo(shift.date)"><i class="material-icons left">sync</i>Get shift data</a>
+                            <a class="waves-effect waves-light btn" ng-click="getShiftInfo(shiftCheck.date)"><i class="material-icons left">sync</i>Get shift data</a>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.workFromHome">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option ng-selected="shift.workFromHome == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Work From Home</label>
                             </div>
@@ -34,9 +32,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.callout">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option ng-selected="shift.callout == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Was the supporter out (optional)?</label>
                             </div>
@@ -44,19 +40,15 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.planned">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option ng-selected="shift.planned == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Was the absence planned (optional)?</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select ng-model="shift.shiftlengthid">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Full Day</option>
-                                    <option value="2">Half Day</option>
+                                <select ng-model="shift.shiftlengthId">
+                                    <option ng-selected="shift.shiftLengthId == option.value" ng-repeat="option in shiftOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Shift length</label>
                             </div>
@@ -64,9 +56,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.phone">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option ng-selected="shift.phone == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Was today a phone shift (optional)?</label>
                             </div>
@@ -74,9 +64,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.email">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option ng-selected="shift.email == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Was today an email shift (optional)?</label>
                             </div>
@@ -84,19 +72,15 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.integrations">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option ng-selected="shift.integrations == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Was today an integrations shift (optional)?</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select ng-model="shift.noncoverage">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                <select ng-model="shift.nonCoverage">
+                                    <option ng-selected="shift.nonCoverage == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Was today a non-coverage shift (optional)?</label>
                             </div>
