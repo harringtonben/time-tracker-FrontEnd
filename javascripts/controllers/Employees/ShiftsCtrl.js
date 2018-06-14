@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope, EmployeeService) {
+app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope, EmployeeService, ShiftService) {
 
     $scope.shift = {};
 
@@ -23,6 +23,16 @@ app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope,
     $timeout(function () {
         $('select').material_select();
     });
+
+    $scope.getShiftInfo = (date) => {
+
+        let formattedDate = ShiftService.formatDate(date);
+        ShiftService.getShiftInfo($routeParams.id, formattedDate).then((results) => {
+            $scope.shift = results.data;
+        }).catch((error) => {
+            console.log(error);
+        });
+    };
 
     employeeData(120);
 

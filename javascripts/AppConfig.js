@@ -51,7 +51,7 @@ app.config(['momentPickerProvider', function (momentPickerProvider) {
     momentPickerProvider.options({
         /* Picker properties */
         locale:        'en',
-        format:        'L LTS',
+        format:        'MM-DD-YYYY',
         minView:       'decade',
         maxView:       'day',
         startView:     'month',
