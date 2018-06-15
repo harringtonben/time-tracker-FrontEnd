@@ -12,7 +12,6 @@
             </div>
             <div class="card-action">
                 <div class="input-field col s3">
-                    <form class="col s12" name="shift">
                         <div class="row">
                             <input class="form-control"
                                    ng-model="shiftCheck.date"
@@ -21,10 +20,11 @@
                                    moment-picker="ctrl.input">
                             <a class="waves-effect waves-light btn" ng-click="getShiftInfo(shiftCheck.date)"><i class="material-icons left">sync</i>Get shift data</a>
                         </div>
+                    <form class="col s12" name="shift">
                         <div class="row">
                             <div class="input-field col s12">
                                 <select ng-model="shift.workFromHome">
-                                    <option ng-selected="shift.workFromHome == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                    <option ng-selected="shift.workFromHome === option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Work From Home</label>
                             </div>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select ng-model="shift.shiftlengthId">
+                                <select ng-model="shift.shiftLengthId">
                                     <option ng-selected="shift.shiftLengthId == option.value" ng-repeat="option in shiftOptions" ng-value="option.value">{{option.title}}</option>
                                 </select>
                                 <label>Shift length</label>
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <a class="waves-effect waves-light btn center" ng-click="addSupporter(newEmployee)"><i class="material-icons right">add</i>Add Supporter</a>
+                            <a class="waves-effect waves-light btn center" ng-click="logShift(shift, shiftCheck.date)"><i class="material-icons right">add</i>Log Shift</a>
                         </div>
                     </form>
                 </div>

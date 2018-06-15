@@ -1,14 +1,13 @@
 'use strict';
 
-app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope, EmployeeService, ShiftService) {
+app.controller("ShiftsCtrl", function($timeout, $location, $route, $routeParams, $scope, EmployeeService, ShiftService) {
 
-    $scope.shift = {};
-
-    $scope.selectOptions = [{title: 'Yes', value: false},
+    $scope.selectOptions = [{title: 'Yes', value: true},
         {title: 'No', value: false}];
 
     $scope.shiftOptions = [{title: 'Full Day', value: 1},
         {title: 'Half Day', value: 2}];
+
 
     const employeeData = (timeframe) => {
         EmployeeService.getEmployeeData($routeParams.id, timeframe).then((results) => {
@@ -21,6 +20,9 @@ app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope,
 
             $scope.data = [$scope.employee.totalCalledOut, $scope.employee.totalUnplannedOut, $scope.employee.totalWorkedFromHome];
 
+            console.log($scope.employee);
+            console.log($scope.selectOptions);
+            console.log($scope.shiftOptions);
         }).catch((error) => {
             console.log(error);
         });
@@ -36,12 +38,36 @@ app.controller("ShiftsCtrl", function($timeout, $location, $routeParams, $scope,
         let formattedDate = ShiftService.formatDate(date);
         ShiftService.getShiftInfo($routeParams.id, formattedDate).then((results) => {
             var shiftData = results.data;
-            shiftData.date = ShiftService.formatDate(shiftData.shiftDate);
             $scope.shift = shiftData;
             console.log($scope.shift);
         }).catch((error) => {
             console.log(error);
         });
+    };
+
+    $scope.logShift = (shift, date) => {
+        let formattedDate = ShiftService.formatDate(date);
+        if (shift.shiftId != null)
+        {
+            let shiftJson = ShiftService.createNewShiftJson(shift, formattedDate, $scope.employee.employeeId, $scope.employee.managerId);
+            ShiftService.editOldShift(shiftJson, $scope.shift.shiftId).then((results) => {
+                $route.reload();
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
+        else
+        {
+            console.log(shift.shiftId);
+            let shiftJson = ShiftService.createNewShiftJson(shift, formattedDate, $scope.employee.employeeId, $scope.employee.managerId);
+            ShiftService.logNewShift(shiftJson).then((results) => {
+                console.log(results);
+                $route.reload();
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
+
     };
 
     employeeData(120);
