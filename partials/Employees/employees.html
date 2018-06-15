@@ -1,3 +1,14 @@
+
+<div class="row">
+    <label for="manager" class="active">Manager</label>
+    <select ng-model="managerId" id="manager" ng-change="filterManager(managerId)">
+        <option value="" disabled selected>Filter By Manager</option>
+        <option ng-repeat="manager in managers" ng-value="manager.managerId">{{manager.name}}</option>
+        <option value="0">Reset</option>
+    </select>
+
+</div>
+
 <div class="row">
 
     <div class="card col s4 m4" ng-repeat="employee in employees">
