@@ -19,7 +19,7 @@ app.controller("ShiftsCtrl", function($timeout, $location, $route, $routeParams,
             $scope.colors = [ '#1E91D6', '#F08700', '#8FC93A', '#E4CC37', '#F06543', '#F9F871'];
 
             $scope.data = [$scope.employee.totalCalledOut, $scope.employee.totalUnplannedOut, $scope.employee.totalWorkedFromHome];
-            
+
         }).catch((error) => {
             console.log(error);
         });

@@ -10,7 +10,7 @@
             <div class="card-content">
                 <h3>{{employee.name}}</h3>
             </div>
-            <div class="card-action">
+            <div class="shift-form">
                 <div class="input-field col s3">
                         <div class="row">
                             <input class="form-control"
@@ -18,7 +18,7 @@
                                    ng-model-options="{ updateOn: 'blur' }"
                                    placeholder="Shift Date"
                                    moment-picker="ctrl.input">
-                            <a class="waves-effect waves-light btn" ng-click="getShiftInfo(shiftCheck.date)"><i class="material-icons left">sync</i>Get shift data</a>
+                            <a class="waves-effect waves-light btn button" ng-click="getShiftInfo(shiftCheck.date)"><i class="material-icons left">sync</i>Get shift data</a>
                         </div>
                     <form class="col s12" name="shift">
                         <div class="row">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <a class="waves-effect waves-light btn center" ng-click="logShift(shift, shiftCheck.date)"><i class="material-icons right">add</i>Log Shift</a>
+                            <a class="waves-effect waves-light btn center button" ng-click="logShift(shift, shiftCheck.date)"><i class="material-icons right">add</i>Log Shift</a>
                         </div>
                     </form>
                 </div>
