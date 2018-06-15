@@ -42,6 +42,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/shifts.html',
             controller: 'ShiftsCtrl'
         })
+        .when("/reporting", {
+            templateUrl: "partials/reporting.html",
+            controller: 'ReportingCtrl'
+        })
         .otherwise("/home");
 
 
