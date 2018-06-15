@@ -64,12 +64,17 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
         }
         else
         {
-            $scope.employees = $scope.employees.filter((manager) => {
-                if (manager.managerId === managerId)
-                {
-                    return manager;
-                }
-            });
+            getEmployees(120);
+
+            $timeout(() => {
+                $scope.employees = $scope.employees.filter((manager) => {
+                    if (manager.managerId === managerId)
+                    {
+                        return manager;
+                    }
+                });
+            }, 150);
+
         }
     };
 
