@@ -9,8 +9,8 @@
             <option value="5">Unplanned vs. Planned Sick Time</option>
             <option value="6">All Email Days</option>
             <option value="7">All Phone Days</option>
-            <option value="8">All Integrations Days</option>
-            <option value="9">All Non Coverage Days</option>
+            <option value="8">Total Phone Days</option>
+            <option value="9">Total Email Days</option>
         </select>
     </div>
 
@@ -63,6 +63,9 @@
                 <th>Email Day</th>
                 <th>Integrations Day</th>
                 <th>Non Coverage Day</th>
+                <th>Total Phone Days</th>
+                <th>Total Email Days</th>
+                <th>Total Unplanned Time Out</th>
             </tr>
             </thead>
             <tbody>
@@ -83,6 +86,9 @@
                 <td ng-if="data.integrations == false"></td>
                 <td ng-if="data.nonCoverage == true"><i class="material-icons">check</i></td>
                 <td ng-if="data.nonCoverage == false"></td>
+                <td>{{data.totalPhoneDays}}</td>
+                <td>{{data.totalEmailDays}}</td>
+                <td>{{data.unplannedSickTime}}</td>
             </tr>
 
             </tbody>
