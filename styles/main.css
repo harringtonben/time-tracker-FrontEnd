@@ -12,6 +12,9 @@ main {
 .time-range {
   margin-top: 35px; }
 
+.shift-form {
+  padding-right: 25px; }
+
 html, body {
   height: 100%; }
 

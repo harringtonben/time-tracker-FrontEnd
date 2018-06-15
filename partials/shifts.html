@@ -1,0 +1,96 @@
+
+<div class="col s12 m7">
+    <div class="card horizontal">
+        <div class="card-image">
+            <canvas id="doughnut" class="chart chart-doughnut"
+                    chart-data="data" chart-labels="labels">
+            </canvas>
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <h3>{{employee.name}}</h3>
+            </div>
+            <div class="shift-form">
+                <div class="input-field col s3">
+                        <div class="row">
+                            <input class="form-control"
+                                   ng-model="shiftCheck.date"
+                                   ng-model-options="{ updateOn: 'blur' }"
+                                   placeholder="Shift Date"
+                                   moment-picker="ctrl.input">
+                            <a class="waves-effect waves-light btn button" ng-click="getShiftInfo(shiftCheck.date)"><i class="material-icons left">sync</i>Get shift data</a>
+                        </div>
+                    <form class="col s12" name="shift">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.workFromHome">
+                                    <option ng-selected="shift.workFromHome === option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Work From Home</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.callout">
+                                    <option ng-selected="shift.callout == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Was the supporter out (optional)?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.planned">
+                                    <option ng-selected="shift.planned == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Was the absence planned (optional)?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.shiftLengthId">
+                                    <option ng-selected="shift.shiftLengthId == option.value" ng-repeat="option in shiftOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Shift length</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.phone">
+                                    <option ng-selected="shift.phone == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Was today a phone shift (optional)?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.email">
+                                    <option ng-selected="shift.email == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Was today an email shift (optional)?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.integrations">
+                                    <option ng-selected="shift.integrations == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Was today an integrations shift (optional)?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="shift.nonCoverage">
+                                    <option ng-selected="shift.nonCoverage == option.value" ng-repeat="option in selectOptions" ng-value="option.value">{{option.title}}</option>
+                                </select>
+                                <label>Was today a non-coverage shift (optional)?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <a class="waves-effect waves-light btn center button" ng-click="logShift(shift, shiftCheck.date)"><i class="material-icons right">add</i>Log Shift</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

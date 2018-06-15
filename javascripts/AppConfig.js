@@ -6,6 +6,10 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/home.html',
             controller: 'HomeCtrl'
         })
+        .when("/employees", {
+            templateUrl: 'partials/Employees/employees.html',
+            controller: 'EmployeesCtrl'
+        })
         .when("/addnewemployee", {
             templateUrl: 'partials/Employees/newemployee.html',
             controller: 'NewEmployeeCtrl'
@@ -34,6 +38,25 @@ app.config(function($routeProvider) {
             templateUrl: 'partials/Managers/deletemanager.html',
             controller: 'DeleteManagerCtrl'
         })
+        .when("/logshift/:id", {
+            templateUrl: 'partials/shifts.html',
+            controller: 'ShiftsCtrl'
+        })
         .otherwise("/home");
+
+
 });
 
+app.config(['momentPickerProvider', function (momentPickerProvider) {
+    momentPickerProvider.options({
+        /* Picker properties */
+        locale:        'en',
+        format:        'MM-DD-YYYY',
+        minView:       'decade',
+        maxView:       'day',
+        startView:     'month',
+        autoclose:     true,
+        today:         false,
+        keyboard:      false
+    });
+}]);

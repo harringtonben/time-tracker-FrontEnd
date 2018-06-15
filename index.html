@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Time Tracker</title>
     <link rel="stylesheet" type="text/css" href="./lib/node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <link href="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
@@ -31,6 +33,9 @@
 <script type="text/javascript" src="./lib/node_modules/angular-animate/angular-animate.min.js"></script>
 <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="./lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+<script src="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-moment/angular-moment.min.js"></script>
 <script type="text/javascript" src="./lib/node_modules/chart.js/dist/Chart.min.js"></script>
 <script type="text/javascript" src="./lib/node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
 
@@ -40,15 +45,19 @@
 <script type="text/javascript" src="./javascripts/services/HomeService.js"></script>
 <script type="text/javascript" src="./javascripts/services/EmployeeService.js"></script>
 <script type="text/javascript" src="./javascripts/services/ManagerService.js"></script>
+<script type="text/javascript" src="./javascripts/services/ShiftService.js"></script>
 
 <script type="text/javascript" src="./javascripts/controllers/HomeCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/Employees/EmployeesCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Employees/NewEmployeeCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Employees/EditEmployeeCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Employees/DeleteEmployeeCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/Employees/ShiftsCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Managers/NewManagerCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Managers/ManagersCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Managers/EditManagerCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/Managers/DeleteManagerCtrl.js"></script>
+
 
 </body>
 </html>

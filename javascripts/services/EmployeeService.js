@@ -26,5 +26,9 @@ app.service("EmployeeService", function($http) {
         return $http.delete(`http://localhost:5000/api/supporters/${id}`);
     };
 
-    return {addNewEmployee, createEmployeeJson, deleteEmployee, updateEmployee, getEmployeeById};
+    const getEmployeeData = (id, timeframe) => {
+        return $http.get(`http://localhost:5000/api/supporters/${id}?timeframe=${timeframe}`);
+    };
+
+    return {addNewEmployee, createEmployeeJson, deleteEmployee, getEmployeeData, updateEmployee, getEmployeeById};
 });
