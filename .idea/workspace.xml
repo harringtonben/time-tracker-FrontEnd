@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e5f4fbd-f584-4035-b25f-2063df1b6c7a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/javascripts/controllers/Employees/ShiftsCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/Employees/ShiftsCtrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/services/ShiftService.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/services/ShiftService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/shifts.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/shifts.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +19,8 @@
       <file leaf-file-name="ShiftsCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/ShiftsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            <state relative-caret-position="267">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -296,12 +294,12 @@
       <updated>1528333651627</updated>
       <workItem from="1528333652964" duration="9105000" />
       <workItem from="1528556372755" duration="15000" />
-      <workItem from="1528556401537" duration="53610000" />
+      <workItem from="1528556401537" duration="53796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62730000" />
+    <option name="totallyTimeSpent" value="62916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1953" y="-703" width="1898" height="1713" extended-state="0" />
@@ -590,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/controllers/Employees/ShiftsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        <state relative-caret-position="267">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
         </state>
       </provider>
     </entry>

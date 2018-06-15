@@ -19,19 +19,19 @@ app.controller("ShiftsCtrl", function($timeout, $location, $route, $routeParams,
             $scope.colors = [ '#1E91D6', '#F08700', '#8FC93A', '#E4CC37', '#F06543', '#F9F871'];
 
             $scope.data = [$scope.employee.totalCalledOut, $scope.employee.totalUnplannedOut, $scope.employee.totalWorkedFromHome];
-
-            console.log($scope.employee);
-            console.log($scope.selectOptions);
-            console.log($scope.shiftOptions);
+            
         }).catch((error) => {
             console.log(error);
         });
     };
 
 
-    $timeout(function () {
-        $('select').material_select();
-    });
+    const populateDropdowns = () => {
+        $timeout(function () {
+            $('select').material_select();
+        });
+    };
+
 
     $scope.getShiftInfo = (date) => {
 
@@ -39,7 +39,7 @@ app.controller("ShiftsCtrl", function($timeout, $location, $route, $routeParams,
         ShiftService.getShiftInfo($routeParams.id, formattedDate).then((results) => {
             var shiftData = results.data;
             $scope.shift = shiftData;
-            console.log($scope.shift);
+            populateDropdowns();
         }).catch((error) => {
             console.log(error);
         });
@@ -71,5 +71,6 @@ app.controller("ShiftsCtrl", function($timeout, $location, $route, $routeParams,
     };
 
     employeeData(120);
+    populateDropdowns();
 
 });
