@@ -21,6 +21,18 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
         });
     };
 
+    const getManagers = () => {
+        ManagerService.getManagers().then((results) => {
+            $scope.managers = results.data;
+            $timeout(function () {
+                $('select').material_select();
+            });
+        }).catch((error) => {
+            console.log(error);
+        });
+    };
+
+
     const createChartData = () => {
         $scope.data = [];
         $scope.employees.forEach((employee) => {
@@ -40,5 +52,13 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
         $location.path(`/logshift/${id}`);
     };
 
+    $scope.filterManager = (managerId) => {
+        if (managerId == 0)
+        {
+            getEmployees(120);
+        }
+    };
+
     getEmployees(120);
+    getManagers();
 });
