@@ -50,7 +50,27 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
 
         if (employeeId == null)
         {
-            ReportingService.
+            ReportingService.getReport(report, timeFrame).then((results) => {
+                console.log(results.data);
+            }).catch((error) => {
+                console.log(error);
+            });
         }
+        else
+        {
+            ReportingService.getReportByEmployee(report, employeeId, timeFrame).then((results) => {
+                console.log(results.data);
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
+    };
+
+    $scope.runManagerReport = (report, managerId, timeFrame) => {
+        ReportingService.getReportByManager(report, managerId, timeFrame).then((results) => {
+            console.log(results.data);
+        }).catch((error) => {
+            console.log(error);
+        });
     };
 });
