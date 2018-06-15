@@ -50,5 +50,44 @@
         </div>
     </div>
 
+    <div ng-if="reportingData != null">
+        <table class="highlight">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Out</th>
+                <th>Planned</th>
+                <th>Worked From Home</th>
+                <th>Phone Day</th>
+                <th>Email Day</th>
+                <th>Integrations Day</th>
+                <th>Non Coverage Day</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="data in reportingData">
+                <td>{{data.date}}</td>
+                <td>{{data.name}}</td>
+                <td ng-if="data.callout == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.callout == false"></td>
+                <td ng-if="data.planned == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.planned == false"></td>
+                <td ng-if="data.workFromHome == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.workFromHome == false"></td>
+                <td ng-if="data.phone == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.phone == false"></td>
+                <td ng-if="data.email == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.email == false"></td>
+                <td ng-if="data.integrations == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.integrations == false"></td>
+                <td ng-if="data.nonCoverage == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.nonCoverage == false"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
 </div>
 

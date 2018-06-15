@@ -5,6 +5,8 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
     const getAllSupporters = () => {
         EmployeeService.getEmployees().then((results) => {
             $scope.employees = results.data;
+            let allEmployees = {name: "All Employees", employeeId: "null"};
+            $scope.employees.unshift(allEmployees);
         }).catch((error) => {
             console.log(error);
         });
@@ -51,6 +53,7 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
         if (employeeId == null)
         {
             ReportingService.getReport(report, timeFrame).then((results) => {
+                $scope.reportingData = results.data;
                 console.log(results.data);
             }).catch((error) => {
                 console.log(error);
@@ -59,6 +62,7 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
         else
         {
             ReportingService.getReportByEmployee(report, employeeId, timeFrame).then((results) => {
+                $scope.reportingData = results.data;
                 console.log(results.data);
             }).catch((error) => {
                 console.log(error);
@@ -68,6 +72,7 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
 
     $scope.runManagerReport = (report, managerId, timeFrame) => {
         ReportingService.getReportByManager(report, managerId, timeFrame).then((results) => {
+            $scope.reportingData = results.data;
             console.log(results.data);
         }).catch((error) => {
             console.log(error);

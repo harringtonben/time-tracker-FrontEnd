@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e5f4fbd-f584-4035-b25f-2063df1b6c7a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/services/ReportingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/services/ReportingService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/reporting.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/reporting.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,20 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportingCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReportingCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="43" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="43" />
+            <state relative-caret-position="120">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reporting.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reporting.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/reporting.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="83" />
+            <state relative-caret-position="309">
+              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -156,9 +155,9 @@
         <option value="$PROJECT_DIR$/javascripts/AppConfig.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascripts/services/EmployeeService.js" />
-        <option value="$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js" />
         <option value="$PROJECT_DIR$/javascripts/services/ReportingService.js" />
         <option value="$PROJECT_DIR$/partials/reporting.html" />
+        <option value="$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js" />
       </list>
     </option>
   </component>
@@ -287,12 +286,12 @@
       <updated>1528333651627</updated>
       <workItem from="1528333652964" duration="9105000" />
       <workItem from="1528556372755" duration="15000" />
-      <workItem from="1528556401537" duration="60467000" />
+      <workItem from="1528556401537" duration="61505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69587000" />
+    <option name="totallyTimeSpent" value="70625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="23" width="1842" height="1085" extended-state="0" />
@@ -597,17 +596,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js">
+    <entry file="file://$PROJECT_DIR$/partials/reporting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="43" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="43" />
+        <state relative-caret-position="309">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/reporting.html">
+    <entry file="file://$PROJECT_DIR$/javascripts/controllers/ReportingCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="83" />
+        <state relative-caret-position="120">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
         </state>
       </provider>
     </entry>
