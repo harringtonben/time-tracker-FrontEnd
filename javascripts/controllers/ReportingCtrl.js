@@ -4,7 +4,7 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
 
     const getAllSupporters = () => {
         EmployeeService.getEmployees().then((results) => {
-            console.log(results.data);
+            $scope.employees = results.data;
         }).catch((error) => {
             console.log(error);
         });
@@ -13,7 +13,6 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
     const getManagers = () => {
         ManagerService.getManagers().then((results) => {
             $scope.managers = results.data;
-            console.log($scope.managers);
         }).catch((error) => {
             console.log(error);
         });
@@ -25,4 +24,28 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
     $timeout(function () {
         $('select').material_select();
     });
+
+    $scope.refreshDropdown = () => {
+        $timeout(function () {
+            $('select').material_select();
+        });
+    };
+
+    $scope.items = [
+        {text: "1 Week", value: 7},
+        {text: "2 Weeks", value: 14},
+        {text: "3 Weeks", value: 21},
+        {text: "4 Weeks", value: 28},
+        {text: "6 Weeks", value: 42},
+        {text: "12 Weeks", value: 84},
+        {text: "18 Weeks", value: 126},
+        {text: "6 Months", value: 182},
+        {text: "1 Year", value: 365}
+    ];
+
+    $scope.runSelectedReport = (report, employeeId, timeFrame) => {
+        console.log(report);
+        console.log(employeeId);
+        console.log(timeFrame);
+    };
 });
