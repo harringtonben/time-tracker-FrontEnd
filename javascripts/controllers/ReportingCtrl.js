@@ -47,5 +47,10 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
         console.log(report);
         console.log(employeeId);
         console.log(timeFrame);
+
+        if (employeeId == null)
+        {
+            ReportingService.
+        }
     };
 });

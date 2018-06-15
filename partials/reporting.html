@@ -15,13 +15,12 @@
     </div>
 
     <div>
-        <div ng-if="selectedReport == 1">
+        <div ng-if="selectedReport == 1 || selectedReport == 2 || selectedReport == 3 || selectedReport == 5 || selectedReport == 6 || selectedReport == 7 || selectedReport == 8 || selectedReport == 9">
             <div class="col s4">
                 <label for="employee" class="active">Employee</label>
                 <select ng-model="employee.employeeId" id="employee" ng-change="refreshDropdown()">
                     <option value="" disabled selected>Select an Employee(optional)</option>
                     <option ng-repeat="employee in employees" ng-value="employee.employeeId">{{employee.name}}</option>
-                    <option value="0">Reset</option>
                 </select>
             </div>
             <div class="col s4">
@@ -31,6 +30,23 @@
                 </select>
             </div>
             <a class="waves-effect waves-light btn" ng-click="runSelectedReport(selectedReport, employee.employeeId, timeFrame)">Run Report</a>
+        </div>
+
+        <div ng-if="selectedReport == 4">
+            <div class="col s4">
+                <label for="manager" class="active">Manager</label>
+                <select ng-model="manager.managerId" id="manager" ng-change="refreshDropdown()">
+                    <option value="" disabled selected>Select a Manager</option>
+                    <option ng-repeat="manager in managers" ng-value="manager.managerId">{{manager.name}}</option>
+                </select>
+            </div>
+            <div class="col s4">
+                <select ng-model="timeFrame">
+                    <option value="" disabled ng-selected="true">Change Time Frame</option>
+                    <option ng-repeat="item in items" ng-value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            <a class="waves-effect waves-light btn" ng-click="runSelectedReport(selectedReport, manager.managerId, timeFrame)">Run Report</a>
         </div>
     </div>
 
