@@ -53,9 +53,23 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
     };
 
     $scope.filterManager = (managerId) => {
-        if (managerId == 0)
+
+        if (managerId === '0')
         {
             getEmployees(120);
+        }
+        else if (managerId == null)
+        {
+            return null;
+        }
+        else
+        {
+            $scope.employees = $scope.employees.filter((manager) => {
+                if (manager.managerId === managerId)
+                {
+                    return manager;
+                }
+            });
         }
     };
 
