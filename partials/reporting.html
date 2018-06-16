@@ -1,0 +1,101 @@
+<div>
+    <div class="row">
+        <h4>Select a report from the dropdown to get started</h4>
+        <select id="report" ng-model="selectedReport">
+            <option value="1">All Shifts</option>
+            <option value="2">All Shifts Worked From Home</option>
+            <option value="3">All Unplanned Callouts</option>
+            <option value="4">Shifts By Manager</option>
+            <option value="5">Unplanned vs. Planned Sick Time</option>
+            <option value="6">All Email Days</option>
+            <option value="7">All Phone Days</option>
+            <option value="8">Total Phone Days</option>
+            <option value="9">Total Email Days</option>
+        </select>
+    </div>
+
+    <div>
+        <div ng-if="selectedReport == 1 || selectedReport == 2 || selectedReport == 3 || selectedReport == 5 || selectedReport == 6 || selectedReport == 7 || selectedReport == 8 || selectedReport == 9">
+            <div class="col s4">
+                <label for="employee" class="active">Employee</label>
+                <select ng-model="employee.employeeId" id="employee" ng-change="refreshDropdown()">
+                    <option value="" disabled selected>Select an Employee(optional)</option>
+                    <option ng-repeat="employee in employees" ng-value="employee.employeeId">{{employee.name}}</option>
+                </select>
+            </div>
+            <div class="col s4">
+                <select ng-model="timeFrame">
+                    <option value="" disabled ng-selected="true">Change Time Frame</option>
+                    <option ng-repeat="item in items" ng-value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            <a class="waves-effect waves-light btn" ng-click="runSelectedReport(selectedReport, employee.employeeId, timeFrame)">Run Report</a>
+            <a class="waves-effect waves-light btn" ng-if="reportingData != null" ng-click="exportReport(selectedReport, employeeId.managerId, timeFrame)">Export Report</a>
+        </div>
+
+        <div ng-if="selectedReport == 4">
+            <div class="col s4">
+                <label for="manager" class="active">Manager</label>
+                <select ng-model="manager.managerId" id="manager" ng-change="refreshDropdown()">
+                    <option value="" disabled selected>Select a Manager</option>
+                    <option ng-repeat="manager in managers" ng-value="manager.managerId">{{manager.name}}</option>
+                </select>
+            </div>
+            <div class="col s4">
+                <select ng-model="timeFrame">
+                    <option value="" disabled ng-selected="true">Change Time Frame</option>
+                    <option ng-repeat="item in items" ng-value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            <a class="waves-effect waves-light btn" ng-click="runManagerReport(selectedReport, manager.managerId, timeFrame)">Run Report</a>
+            <a class="waves-effect waves-light btn" ng-if="reportingData != null" ng-click="exportReport(selectedReport, manager.managerId, timeFrame)">Export Report</a>
+        </div>
+    </div>
+
+    <div ng-if="reportingData != null">
+        <table class="highlight">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Out</th>
+                <th>Planned</th>
+                <th>Worked From Home</th>
+                <th>Phone Day</th>
+                <th>Email Day</th>
+                <th>Integrations Day</th>
+                <th>Non Coverage Day</th>
+                <th>Total Phone Days</th>
+                <th>Total Email Days</th>
+                <th>Total Unplanned Time Out</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="data in reportingData">
+                <td>{{data.date}}</td>
+                <td>{{data.name}}</td>
+                <td ng-if="data.callout == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.callout == false"></td>
+                <td ng-if="data.planned == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.planned == false"></td>
+                <td ng-if="data.workFromHome == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.workFromHome == false"></td>
+                <td ng-if="data.phone == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.phone == false"></td>
+                <td ng-if="data.email == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.email == false"></td>
+                <td ng-if="data.integrations == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.integrations == false"></td>
+                <td ng-if="data.nonCoverage == true"><i class="material-icons">check</i></td>
+                <td ng-if="data.nonCoverage == false"></td>
+                <td>{{data.totalPhoneDays}}</td>
+                <td>{{data.totalEmailDays}}</td>
+                <td>{{data.unplannedSickTime}}</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
