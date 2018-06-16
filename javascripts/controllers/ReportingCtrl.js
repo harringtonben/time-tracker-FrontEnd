@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeService, ManagerService, ReportingService) {
+app.controller("ReportingCtrl", function($timeout, $location, $scope, moment, EmployeeService, ManagerService, ReportingService) {
 
     const getAllSupporters = () => {
         EmployeeService.getEmployees().then((results) => {
@@ -46,15 +46,12 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
     ];
 
     $scope.runSelectedReport = (report, employeeId, timeFrame) => {
-        console.log(report);
-        console.log(employeeId);
-        console.log(timeFrame);
 
         if (employeeId == null)
         {
             ReportingService.getReport(report, timeFrame).then((results) => {
                 $scope.reportingData = results.data;
-                console.log(results.data);
+                $scope.reportingData = formatDates();
             }).catch((error) => {
                 console.log(error);
             });
@@ -63,7 +60,6 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
         {
             ReportingService.getReportByEmployee(report, employeeId, timeFrame).then((results) => {
                 $scope.reportingData = results.data;
-                console.log(results.data);
             }).catch((error) => {
                 console.log(error);
             });
@@ -73,9 +69,15 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, EmployeeSe
     $scope.runManagerReport = (report, managerId, timeFrame) => {
         ReportingService.getReportByManager(report, managerId, timeFrame).then((results) => {
             $scope.reportingData = results.data;
-            console.log(results.data);
         }).catch((error) => {
             console.log(error);
+        });
+    };
+
+    const formatDates = () => {
+        $scope.reportingData.map((item) => {
+           item.date = moment(item.date).format('MM-DD-YYYY');
+           return item;
         });
     };
 });
