@@ -1,6 +1,6 @@
 'use strict';
 
-app.service("ReportingService", function($http) {
+app.service("ReportingService", function($http, $window) {
     const getReport = (report, timeframe) => {
         return $http.get(`http://localhost:5000/api/supporters/reporting/${report}?timeframe=${timeframe}`);
     };
@@ -13,5 +13,18 @@ app.service("ReportingService", function($http) {
         return $http.get(`http://localhost:5000/api/supporters/reporting/${report}?timeframe=${timeframe}&managerid=${managerId}`);
     };
 
-    return {getReport, getReportByEmployee, getReportByManager};
+    const exportReport = (report, timeframe) => {
+        $window.open(`http://localhost:5000/api/supporters/exports/${report}?timeframe=${timeframe}`, '_blank');
+    };
+
+    const exportReportByEmployee = (report, employeeId, timeframe) => {
+        $window.open(`http://localhost:5000/api/supporters/exports/${report}?timeframe=${timeframe}&employeeid=${employeeId}`, '_blank');
+    };
+
+    const exportReportByManager = (report, managerId, timeframe) => {
+        $window.open(`http://localhost:5000/api/supporters/exports/${report}?timeframe=${timeframe}&managerid=${managerId}`, '_blank');
+    };
+
+
+    return {exportReport, exportReportByEmployee, exportReportByManager, getReport, getReportByEmployee, getReportByManager};
 });
