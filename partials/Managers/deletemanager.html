@@ -1,9 +1,9 @@
-<div class="row">
-    <h3>Are you sure you want to delete the following employee? This will delete them, as well as all shifts and data associated with them.</h3>
+<div class="row content">
+    <h4>Are you sure you want to delete the following employee? This will delete them, as well as all shifts and data associated with them.</h4>
     <br>
-    <h4>{{manager.name}}</h4>
+    <h5 class="center">{{manager.name}}</h5>
 </div>
 <div class="row center">
-    <a class="waves-effect waves-light btn" ng-click="goHome()">No, I don't want to delete</a>
+    <a class="waves-effect waves-light btn light-blue lighten-1 add" ng-click="goHome()">No, I don't want to delete</a>
     <a class="waves-effect waves-light btn modal-trigger red darken-1" ng-click="delete()">Yes, I want to delete</a>
 </div>

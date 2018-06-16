@@ -1,17 +1,34 @@
 @import 'footer';
 @import 'home';
 @import 'shifts';
+@import 'managers';
+@import 'variables';
+@import 'employees';
 
-html, body {
-  height: 100%;
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: $lightblue !important;
 }
-body {
-  display: flex;
-  flex-direction: column;
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $lightblue !important;
+  box-shadow: 0 1px 0 0 $lightblue !important;
 }
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $lightblue;
+  -webkit-box-shadow: 0 1px 0 0 $lightblue;
+  box-shadow: 0 1px 0 0 $lightblue;
+}
+
 .content {
-  flex: 1 0 auto;
+  margin-top: 125px;
 }
-.footer {
-  flex-shrink: 0;
+
+.emma-img {
+  height: 59px;
+  margin-left: 25px;
 }
+
+
+

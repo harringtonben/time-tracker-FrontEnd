@@ -7,11 +7,12 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
 
             $scope.employees = results.data;
 
+            $scope.colors = [ '#1E91D6', '#F08700', '#8FC93A', '#E4CC37', '#F06543', '#F9F871'];
+
             createChartData();
 
             $scope.labels = ['Total Time Out', 'Total Unplanned Time Out', 'Total Days Worked From Home', 'Total Phone Days', 'Total Email Days', 'Total Integrations Days', 'Total Non Coverage Days'];
 
-            $scope.colors = [ '#1E91D6', '#F08700', '#8FC93A', '#E4CC37', '#F06543', '#F9F871'];
 
             $timeout(function () {
                 $('select').material_select();
@@ -76,6 +77,10 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
             }, 150);
 
         }
+    };
+
+    $scope.addSupporter = () => {
+        $location.path('/addnewemployee');
     };
 
     getEmployees(120);

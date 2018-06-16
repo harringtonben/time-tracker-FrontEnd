@@ -1,3 +1,5 @@
+@import 'variables';
+
 .home-chart {
   margin: 50px;
 }
@@ -6,3 +8,10 @@
   margin-top: 35px;
 }
 
+.dropdown-content li>span {
+    color: $lightblue;
+}
+
+.add {
+  margin-right: 20px;
+}
