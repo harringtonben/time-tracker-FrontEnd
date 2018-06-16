@@ -52,7 +52,6 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, moment, Em
             ReportingService.getReport(report, timeFrame).then((results) => {
                 var formatedDates = formatDates(results.data);
                 $scope.reportingData = formatedDates;
-
             }).catch((error) => {
                 console.log(error);
             });
@@ -75,6 +74,22 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, moment, Em
         }).catch((error) => {
             console.log(error);
         });
+    };
+
+    $scope.exportReport = (report, employeeId, timeFrame) => {
+
+        if (employeeId == null)
+        {
+            ReportingService.exportReport(report, timeFrame);
+        }
+        else
+        {
+            ReportingService.exportReportByEmployee(report, employeeId, timeFrame);
+        }
+    };
+
+    $scope.exportManagerReport = (report, managerId, timeFrame) => {
+        ReportingService.exportReportByManager(report, managerId, timeFrame);
     };
 
     const formatDates = (data) => {
