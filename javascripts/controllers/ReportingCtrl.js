@@ -50,8 +50,9 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, moment, Em
         if (employeeId == null)
         {
             ReportingService.getReport(report, timeFrame).then((results) => {
-                $scope.reportingData = results.data;
-                $scope.reportingData = formatDates();
+                var formatedDates = formatDates(results.data);
+                $scope.reportingData = formatedDates;
+
             }).catch((error) => {
                 console.log(error);
             });
@@ -59,7 +60,8 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, moment, Em
         else
         {
             ReportingService.getReportByEmployee(report, employeeId, timeFrame).then((results) => {
-                $scope.reportingData = results.data;
+                var formatedDates = formatDates(results.data);
+                $scope.reportingData = formatedDates;
             }).catch((error) => {
                 console.log(error);
             });
@@ -68,16 +70,19 @@ app.controller("ReportingCtrl", function($timeout, $location, $scope, moment, Em
 
     $scope.runManagerReport = (report, managerId, timeFrame) => {
         ReportingService.getReportByManager(report, managerId, timeFrame).then((results) => {
-            $scope.reportingData = results.data;
+            var formatedDates = formatDates(results.data);
+            $scope.reportingData = formatedDates;
         }).catch((error) => {
             console.log(error);
         });
     };
 
-    const formatDates = () => {
-        $scope.reportingData.map((item) => {
+    const formatDates = (data) => {
+        data.forEach((item) => {
            item.date = moment(item.date).format('MM-DD-YYYY');
-           return item;
         });
+
+        return data;
     };
+
 });
