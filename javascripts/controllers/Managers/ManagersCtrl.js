@@ -20,4 +20,8 @@ app.controller("ManagersCtrl", function($timeout, $location, $scope, ManagerServ
 
     getManagers();
 
+    $scope.addManager = () => {
+        $location.path('/addnewmanager');
+    };
+
 });

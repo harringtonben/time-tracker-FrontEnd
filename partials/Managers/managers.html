@@ -1,4 +1,5 @@
-<div class="row">
+<div class="row managers-grid">
+    <a class="waves-effect waves-light btn col s2 offset-s10 light-blue lighten-1 add" ng-click="addManager()"><i class="material-icons left">add</i>Add Manager</a>
     <div class="col s4 m4" ng-repeat="manager in managers">
         <div class="card">
             <div class="card-content">
@@ -6,8 +7,8 @@
                 <p>{{manager.title}}</p>
             </div>
             <div class="card-action">
-                <a href="" ng-click="editManager(manager.managerId)">Edit</a>
-                <a href="" ng-click="deleteManager(manager.managerId)">Delete</a>
+                <a class="waves-effect waves-light btn light-blue lighten-1" href="" ng-click="editManager(manager.managerId)">Edit</a>
+                <a class="waves-effect waves-light btn red darken-1" href="" ng-click="deleteManager(manager.managerId)">Delete</a>
             </div>
         </div>
     </div>

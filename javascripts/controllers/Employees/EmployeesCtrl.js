@@ -78,6 +78,10 @@ app.controller("EmployeesCtrl", function($timeout, $location, $scope, HomeServic
         }
     };
 
+    $scope.addSupporter = () => {
+        $location.path('/addnewemployee');
+    };
+
     getEmployees(120);
     getManagers();
 });

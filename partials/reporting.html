@@ -1,4 +1,4 @@
-<div>
+<div class="content">
     <div class="row">
         <h4>Select a report from the dropdown to get started</h4>
         <select id="report" ng-model="selectedReport">
@@ -29,8 +29,8 @@
                     <option ng-repeat="item in items" ng-value="item.value">{{item.text}}</option>
                 </select>
             </div>
-            <a class="waves-effect waves-light btn" ng-click="runSelectedReport(selectedReport, employee.employeeId, timeFrame)">Run Report</a>
-            <a class="waves-effect waves-light btn" ng-if="reportingData != null" ng-click="exportReport(selectedReport, employeeId.managerId, timeFrame)">Export Report</a>
+            <a class="waves-effect waves-light btn light-blue lighten-1" ng-click="runSelectedReport(selectedReport, employee.employeeId, timeFrame)">Run Report</a>
+            <a class="waves-effect waves-light btn light-blue lighten-1" ng-if="reportingData != null" ng-click="exportReport(selectedReport, employeeId.managerId, timeFrame)">Export Report</a>
         </div>
 
         <div ng-if="selectedReport == 4">
@@ -47,8 +47,8 @@
                     <option ng-repeat="item in items" ng-value="item.value">{{item.text}}</option>
                 </select>
             </div>
-            <a class="waves-effect waves-light btn" ng-click="runManagerReport(selectedReport, manager.managerId, timeFrame)">Run Report</a>
-            <a class="waves-effect waves-light btn" ng-if="reportingData != null" ng-click="exportManagerReport(selectedReport, manager.managerId, timeFrame)">Export Report</a>
+            <a class="waves-effect waves-light btn light-blue lighten-1" ng-click="runManagerReport(selectedReport, manager.managerId, timeFrame)">Run Report</a>
+            <a class="waves-effect waves-light btn light-blue lighten-1" ng-if="reportingData != null" ng-click="exportManagerReport(selectedReport, manager.managerId, timeFrame)">Export Report</a>
         </div>
     </div>
 
