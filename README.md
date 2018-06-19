@@ -25,3 +25,4 @@ hs
 ```
 
 #####  This will show in your browser at: http://localhost:8080
+#####  You will also need to have the [backend portion](https://github.com/harringtonben/time-tracker-API) of this project cloned and running for the front end to work correctly.
